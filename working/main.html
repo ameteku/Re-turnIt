@@ -1,0 +1,51 @@
+<div w3-include-html = "header.html"></div>
+<body class = "main">
+    <div class = "top middle">
+        <h1 class> Ready to make money Recycling?</h1>
+        <p>Ohio has made it possible to make money with plastic bottles even if they are no manufactured in Ohio!<br/>
+        This site is here to show you how much money you can possibly make from your waste 
+        and help you track how much you have made </p>
+    </div>
+    <div class = "middle">
+        <p id = "evidence "> History of how much people are making</p>
+        <ul>
+            <button id = "plasticcalc">Plastics</button>
+            <button id = "bottleccalc">Aluminium Cans</button>
+            <button id = "papercalc">Paper</button>
+            <form id = "plasticscalculator" action = "main.html" method = "POST">
+                <label>Number of bottles</label>
+                <input type = "number" required>
+                <label>Current price</label> 
+                <input type = "text" readonly value = "10 cents">
+            </form>
+            <form id = "aluminicanscalculator" action = "main.html" method = "POST">
+                <label>Number of cans</label>
+                <input type = "number" required>
+                <label>Current price</label> 
+                <input type = "text" readonly value = "55.38 cents">
+                <input type = "submit" value = "calculate" class = "main">
+            </form>
+            <form id = "plasticscalculator" action = "main.html" method = "POST">
+                <label>Paper weight</label>
+                <input type = "number" required>
+                <label>Current price</label> 
+                <input type = "text" readonly value = "10 cents">
+                <p>Total </p>
+            </form>    
+        </ul>
+        <table id = "amount">
+            <th>Amount to be made</th>
+            <tr>
+                <td name = "total"></td>
+            </tr>
+        </table>
+        <h1>Convinced you could make some cool side cash now?</h1>
+        <p>Go ahead and hit the Get Started button below!</p>
+        <button id ="Get started button" class = "main">Get Started</button>
+        
+
+    </div>
+    
+    
+</body>
+</html>
