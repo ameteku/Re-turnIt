@@ -1,37 +1,102 @@
-<div w3-include-html = "header.html"></div>
-<body class = "main">
-    <div class = "top middle">
-        <h1 class> Ready to make money Recycling?</h1>
-        <p>Ohio has made it possible to make money with plastic bottles even if they are no manufactured in Ohio!<br/>
-        This site is here to show you how much money you can possibly make from your waste 
-        and help you track how much you have made </p>
-    </div>
-    <div class = "middle">
-        <p id = "evidence "> History of how much people are making</p>
+<html>
+    <head style = "align-content: center">
+        <title>ReturnIt</title>
+        <h1 >How Many?</h1>
         <ul>
-            <button id = "plasticcalc">Plastics</button>
-            <button id = "bottleccalc">Aluminium Cans</button>
-            <button id = "papercalc">Paper</button>
+            <li><a href= "loginpage.html">Account</a></li>
+            <li><a href= "blog.html">blog</a></li>
+        </ul>
+
+        <script>
+            function getvalue()
+            {
+                
+                if(document.getElementById("recycletype").value =="Plastic Bottles")
+                {
+                    document.getElementById("price").value =0.10;
+                }
+                else if (document.getElementById("recycletype").value =="aluminium cans")
+                {
+                    document.getElementById("price").value=0.55;
+                }
+            };
+        
+            function value()
+            {
+                
+                if(document.getElementById("recycletype").value =="Plastic Bottles")
+                {
+                    document.getElementById("profit").value = parseInt(document.getElementById("qty").value) * 0.10;
+                }
+                else if (document.getElementById("recycletype").value =="aluminium cans")
+                {
+                    document.getElementById("profit").value= parseInt(document.getElementById("qty").value) * 0.55;
+                }
+            };
+
+        </script>
+    </head>
+
+    
+<body class = "main">
+    <div class= "topmiddleright">
+        <h2>Mission:</h2>
+        <p>Having realized that Ohio is one of the states that has not implemented the return back recycling program for incentives, 
+            this website has the mission of encouraging individuals,households,retail stores to recycle plastic, glass and metal products but 
+            getting side cash from recycling companies directly into their accounts anytime they successfully return their used items.
+        </p>
+        <br/>
+        <h2>Vision:</h2>
+        <p>This website can be taken to the next level by having a simple sensor that reads a live feed from 
+            your recycling bin and keeps track of how much you can recieve
+        </p>
+        <br/>
+        <p>Plastic effects on the environment have been a major problem in our society that has been looked over for some time now.
+            We can all play a certain part in reducing this problem.
+        </p>
+        
+        <p>Ohio has made it possible to make money with plastic bottles/Aluminium can even if they are not manufactured in Ohio!<br/>
+            This site is here to show you how much money you can possibly make from your waste 
+            and help you track how much you have made when you have returned them 
+        </p>
+    </div>
+        <div>
+            <p id = "evidence ">History of how much people are making</p>
+            <iframe width="699" height="393" src="https://www.youtube.com/embed/tXoIPgoOe2I" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>        
+        </div>  
+    </div>
+    <h2>Try out the calculator to see how much is there to be made from your waste!</h2>
+
+    
+
+    <div class = "topmiddleleft">
+        <h1 class> Ready to make money Recycling?</h1>
+        
+    </div>
+    
+    <div class = "middle">
+         <ul>
+            
             <form id = "plasticscalculator" action = "main.html" method = "POST">
-                <label>Number of bottles</label>
-                <input type = "number" required>
-                <label>Current price</label> 
-                <input type = "text" readonly value = "10 cents">
+                <label>Products</label><br/>
+                <input list = "calcu"   id= "recycletype" oninput = getvalue()><br/><br/>
+                <datalist id = "calcu">
+                    <option value = "Plastic Bottles"  id ="plasticopt" >Plastic bottle</option>
+                    <option value ="aluminium cans" id= "cansopt" >Aluminium Cans</option>
+                </datalist>
+                <label>Number</label><br/>
+                0<input type = "range" value= '20' name = "qtyy" id="qty" max= '500' 
+                oninput = "prof.value =parseInt(qtyy.value)*pric.value">500<br/>
+
+                <label>Current price</label> <br/>
+                <input type = "number"  id=  "price" name = "pric" readonly value=>
+                <label> profit</label>
+                <input name= "prof" id= "profit"  type = "number" readonly>
             </form>
-            <form id = "aluminicanscalculator" action = "main.html" method = "POST">
-                <label>Number of cans</label>
-                <input type = "number" required>
-                <label>Current price</label> 
-                <input type = "text" readonly value = "55.38 cents">
-                <input type = "submit" value = "calculate" class = "main">
-            </form>
-            <form id = "plasticscalculator" action = "main.html" method = "POST">
-                <label>Paper weight</label>
-                <input type = "number" required>
-                <label>Current price</label> 
-                <input type = "text" readonly value = "10 cents">
-                <p>Total </p>
-            </form>    
+            
+              
         </ul>
         <table id = "amount">
             <th>Amount to be made</th>
@@ -41,11 +106,13 @@
         </table>
         <h1>Convinced you could make some cool side cash now?</h1>
         <p>Go ahead and hit the Get Started button below!</p>
-        <button id ="Get started button" class = "main">Get Started</button>
+        <a href = "signup.html"><button id ="Get started button" class = "main" >Get Started</button></a>
         
 
     </div>
     
     
 </body>
+
+
 </html>
