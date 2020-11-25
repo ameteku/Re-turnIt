@@ -1,0 +1,136 @@
+<html>
+    
+    <head style = "align-content: center">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="styles.css">
+        
+        <title>Re-turnIt</title>
+        <div class = "w3-card w3-green flexing w3-container ">
+            <img class = "w3-round w3-hover-opacity logo" src= "recyclelogo.png" alt = "recycle logo" >
+            <h1 class = "headit"><a href = "index.html">Re-turnIt</a></h1>
+            
+            <nav class = navmenu>
+                <li><button class= "w3-button w3-black w3-round-xxlarge"><a href= "loginpage.html">Account</a></button></li>
+                <li><button class= " w3-card w3-button w3-black w3-round-xxlarge"><a href= >blog</a></button></li>
+            </nav>
+         </div>
+
+        <script>
+            var ALUMINIUM = 1.65;
+            var HDPE = 0.58;
+            var PET = 1.28;
+            function getvalue()
+            {
+                
+                if(document.getElementById("recycletype").value =="HPDE Bottles")
+                {
+                    document.getElementById("price").value=HDPE;
+                }
+                else if (document.getElementById("recycletype").value =="aluminium cans")
+                {
+                    document.getElementById("price").value=ALUMINIUM;
+                }
+                else if (document.getElementById("recycletype").value== "PET Bottles")
+                {
+                    document.getElementById("price").value=PET;
+                }
+            };
+        
+            function value()
+            {
+                
+                if(document.getElementById("recycletype").value =="HDPE Bottles")
+                {
+                    document.getElementById("profit").value = parseInt(document.getElementById("qty").value) * HDPE;
+                }
+                else if (document.getElementById("recycletype").value =="aluminium cans")
+                {
+                    document.getElementById("profit").value= parseInt(document.getElementById("qty").value* ALUMINIUM);
+                }
+                else if(document.getElementById("recycletype").value =="PET Bottles")
+                {
+                    document.getElementById("profit").value = parseInt(document.getElementById("qty").value* PET) ;
+                }
+            };
+
+        </script>
+    </head>
+
+    
+<body class = "main w3-card ">
+    <h1 class= "w3-center w3-animate-top w3-card w3-white"id = "makemoni "> Ready to make money Recycling?</h1>
+    <div class="everything">
+       
+        <div class= "topmiddleright">
+            
+            <div class= "flexing w3-mobile ">
+                <div class="mission w3-white w3-container w3-cell w3-card w3-animate-left">
+                    <h2>Mission:</h2>
+                    <p>Having realized that Ohio is one of the states that has not implemented the return back recycling program for incentives, 
+                        <br/>this website has the mission of encouraging individuals,households<br/>,retail stores to recycle plastic, glass and metal products but 
+                        getting side cash from recycling companies directly into their accounts anytime they successfully return their used items.
+                    </p>
+                </div>
+                
+                <br/>
+                <div class="mission w3-white w3-container w3-cell w3-card w3-animate-right">
+                    <h2>Further Development:</h2>
+                    <p>This website can be taken to the next level by having a simple sensor
+                        that takes a live count of bottles thrown into your recycle bin 
+                    </p>
+                </div>
+            </div>
+            <br/>
+            <p class ="w3-card-4 w3-fade-in w3-white">Plastic effects on the environment have been a major problem in our society that has been looked over for some time now.
+                We can all play a certain part in reducing this problem.
+                <br/>
+            Ohio has made it possible to make money with plastic bottles/Aluminium can even if they are not manufactured in Ohio!<br/>
+                This site is here to show you how much money you can possibly make from your waste 
+                and help you track how much you have made when you actually do recycle 
+            </p>
+        </div class = "w3-cell-row w3-card w3-container w3-white w3-center luring" style = "display: flex;">
+            <div class= "w3-card w3-cell  w3-white videoside">
+                <H1 id = "evidence "><b>Example of Someone making money</b></h1>
+                <iframe width="699" height="393" src="https://www.youtube.com/embed/tXoIPgoOe2I" frameborder="5x" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>        
+            </div>
+            <div class = "w3-container w3-cell">
+
+            </div>
+
+            <div class= "w3-card formpage w3-container w3-cell w3-green">
+                <form  id = "plasticscalculator" action = "index.html" method = "POST">
+                    <label style = "align-self: center;"><h1><b>Try out the calculator</b></h1></label><br/>
+                    <label>Product</label><br/>
+                    <select   id= "recycletype" oninput = getvalue() >
+                        <option value = "HDPE Bottles"  id ="hdpebottles" >HDPE bottles</option>
+                        <option value = "PET Bottles"  id ="petbottles" >PET bottles</option>
+                        <option value ="aluminium cans" id= "cansopt" >Aluminium Cans</option>
+                    </select><br/><br/>
+                    <label>Pounds</label><br/>
+                    0<input type = "range" value= '20' name = "qtyy" id="qty" max= '500' 
+                    oninput = "prof.value =parseInt(qtyy.value)*pric.value">500<br/>
+
+                    <label>Current price</label> <br/>
+                    <input type = "number"  id=  "price" name = "pric" value =1.65 readonly value=> <br/>
+                    <label> profit</label><br/>
+                    <input name= "prof" id= "profit"  type = "number" readonly><br/>
+                    <p>reference of prices: <a href = "https://www.calrecycle.ca.gov/bevcontainer/programinfo/faq#:~:text=
+                        The%20California%20Refund%20Value%20(CRV,container%2024%20ounces%20or%20greater.">here</a></p> 
+                </form> 
+            </div> 
+        </div>
+        
+       
+</div>
+    <div class = " w3-white w3-card-2 middle w3-center">    
+        <h1 class= "w3-center">Convinced you could make some cool side cash now?</h1>
+        <a href = "signup.html"><button id ="Getstartedbutton" class = " w3-card main w3-button w3-green w3-hover-light-green" >Get Started</button></a>
+    </div>
+    
+    
+</body>
+
+
+</html>

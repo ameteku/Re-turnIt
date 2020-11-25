@@ -1,0 +1,97 @@
+*{
+    font-family: "Comic Sans";
+    
+}
+.logo{
+    margin-top:20px;
+    width: 50px;
+    height: 35px;
+}
+
+body{
+    background-color: brown;
+    background-position: fixed;
+    background-size: 100%;
+    background-image: url("bg2.jpg");
+}
+.flexing{
+    display: flex;
+    justify-content: center;
+}
+.headit{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.navmenu{
+    display:flex;
+    justify-content:left;
+    align-content: center;
+    text-decoration: none;
+    padding-top: 20px;
+}
+
+.navmenu li{
+    text-decoration: none;
+    list-style: none;
+    padding: 2px;
+    font-size: 18px;
+    
+    
+}
+a{
+    text-decoration: none;
+    font-style: bold;
+}
+
+#makemoni{
+    display : flex;
+    justify-content:center;
+    align-self: center;
+
+}
+
+.mission{
+    justify-content: center;
+    text-align: center;
+    padding-right: 10px;
+    margin-bottom:2px;
+    width: 50%;
+}
+
+.luring{
+    
+}
+
+#plasticscalculator{
+    padding: 10px;
+    margin: 20px;
+    font-size: 20px;
+    justify-content: center;
+    align-self: left;
+
+}
+.videoside{
+    
+    
+    margin-left:10px;
+}
+
+.formpage
+{
+    padding-right: 0;
+    margin-right: 0;
+    padding-left: 30px;
+    justify-content: center;
+}
+
+.signup{
+    width: 30%;
+
+
+}
+
+.login{
+    width: 20%;
+}
